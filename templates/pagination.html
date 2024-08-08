@@ -1,0 +1,11 @@
+<div class="text-center mt-5">
+    {% if page.has_previous %}
+        <a href="?page={{ page.previous_page_number }}" class="btn btn-dark mx-2">Önceki</a>
+    {% endif %}
+
+    <span>Sayfa {{ page.number }} / {{ page.paginator.num_pages }}</span>
+
+    {% if page.has_next %}
+        <a href="?page={{ page.next_page_number }}" class="btn btn-dark mx-2">Sonraki</a>
+    {% endif %}
+</div>
